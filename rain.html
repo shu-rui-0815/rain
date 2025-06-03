@@ -12,7 +12,7 @@
             padding: 0;
         }
         .container {
-            max-width: 900px;
+            width: 900px;
             margin: 50px auto 0 auto;
             padding: 30px;
             background: #fff;
@@ -39,15 +39,15 @@
             border: 0;
             border-radius: 14px;
             box-shadow: 0 4px 16px rgba(52, 100, 141, 0.09);
-            width: 100%;
-            max-width: 860px;
-            min-height: 550px;
+            width: 860px;      /* 固定寬度 */
+            height: 550px;     /* 固定高度 */
             background: #f4f8fb;
+            overflow: hidden;  /* 不要滑動條 */
         }
         @media (max-width: 700px) {
-            .container {
-                padding: 10px;
-                border-radius: 14px;
+            .container, iframe {
+                width: 100%;
+                min-width: 0;
             }
             iframe {
                 min-height: 420px;
