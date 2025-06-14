@@ -2,68 +2,77 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>Power BI - 一月到五月的降雨量</title>
+    <title>Power BI - 雨量與各測站互動圖表</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            background: linear-gradient(135deg, #f1f4f9 0%, #c9d6ff 100%);
-            font-family: 'Segoe UI', Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0; /* 淺灰背景 */
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container-wrapper {
+            width: 95%;
+            max-width: 940px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #666666; /* 深灰外框 */
+            border-radius: 20px;
+            box-sizing: border-box;
         }
         .container {
-            width: 900px;
-            margin: 50px auto 0 auto;
-            padding: 30px;
-            background: #fff;
-            border-radius: 28px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            background: #fff; /* 白色內框 */
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease; /* 漸變動畫 */
+        }
+        .container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+            transform: scale(1.02); /* 滑鼠浮起效果 */
         }
         h1 {
             text-align: center;
-            color: #334e68;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.8em;
         }
         .subtitle {
             text-align: center;
-            color: #7b8794;
-            margin-bottom: 28px;
-            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1em;
         }
         .report-frame {
+            width: 100%;
             display: flex;
             justify-content: center;
         }
         iframe {
+            width: 100%;
+            height: 500px;
             border: 0;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(52, 100, 141, 0.09);
-            width: 860px;      /* 固定寬度 */
-            height: 550px;     /* 固定高度 */
-            background: #f4f8fb;
-            overflow: hidden;  /* 不要滑動條 */
-        }
-        @media (max-width: 700px) {
-            .container, iframe {
-                width: 100%;
-                min-width: 0;
-            }
-            iframe {
-                min-height: 420px;
-                max-width: 100%;
-            }
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            background: #f4f4f4;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>2025-0603 Power BI 報表</h1>
-        <div class="subtitle">
-            互動式數據分析儀表板，請於下方檢視完整報表。
-        </div>
-        <div class="report-frame">
-            <iframe title="2025-0603" src="https://app.powerbi.com/view?r=eyJrIjoiYzEzZWJlY2UtNDYxOC00NjIwLThlOGEtNzBiZGQzNjg2YjkyIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D" allowfullscreen="true"></iframe>
+    <div class="container-wrapper">
+        <div class="container">
+            <h1>雨量與各測站互動圖表</h1>
+            <div class="subtitle">
+                互動式數據分析儀表板，請於下方檢視完整報表。
+            </div>
+            <div class="report-frame">
+                <iframe title="2025-0603" src="https://app.powerbi.com/view?r=eyJrIjoiYzEzZWJlY2UtNDYxOC00NjIwLThlOGEtNzBiZGQzNjg2YjkyIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D" allowfullscreen="true"></iframe>
+            </div>
         </div>
     </div>
 </body>
