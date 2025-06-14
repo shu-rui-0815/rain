@@ -31,6 +31,7 @@
             flex-direction: column;
             align-items: center;
             transition: all 0.3s ease; /* 漸變動畫 */
+            margin-bottom: 20px; /* 框框間距 */
         }
         .container:hover {
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
@@ -61,10 +62,18 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             background: #f4f4f4;
         }
+        .content {
+            text-align: justify;
+            color: #444;
+            font-size: 1em;
+            line-height: 1.6;
+            max-width: 900px;
+        }
     </style>
 </head>
 <body>
     <div class="container-wrapper">
+        <!-- 第一個框：互動圖表 -->
         <div class="container">
             <h1>雨量與台灣各縣市測站互動圖表</h1>
             <div class="subtitle">
@@ -72,6 +81,22 @@
             </div>
             <div class="report-frame">
                 <iframe title="2025-0603" src="https://app.powerbi.com/view?r=eyJrIjoiYzEzZWJlY2UtNDYxOC00NjIwLThlOGEtNzBiZGQzNjg2YjkyIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+
+        <!-- 第二個框：問題定義 -->
+        <div class="container">
+            <h1>問題定義</h1>
+            <div class="content">
+                中南部的降雨量相較北部與中部地區少，且時常面臨停水、限水等水資源的問題，不僅對民生用水造成不便，也增加農作物乾旱、減產等風險，影響農業生產及經濟活動。此外，缺水情形也可能對需要大量用水的企業（如電子、化工產業）帶來生產的風險。
+            </div>
+        </div>
+
+        <!-- 第三個框：解決方法 -->
+        <div class="container">
+            <h1>解決方法</h1>
+            <div class="content">
+                中南部缺水的問題，政府可以考慮將北部的水調往南部，減少南部用水不足的風險，或是在缺水嚴重的南部沿海地區設立海水淡化廠，轉化海水為可用淡水，增加水資源的來源。另外，缺水地區的居民除了日常的簡約用水以外，也可以透過居家儲水來應對停水的情形發生。對於受缺水影響的農民與企業，政府可以提供相對應的補償來減少經濟的損失，企業也可以導入低耗水的生產設備，降低用水的機率。
             </div>
         </div>
     </div>
